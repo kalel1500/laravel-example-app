@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "589cc0f65c3aaa7d4e9024d545bc1974",
+    "content-hash": "0b1284b7b9665e1651d9488b4e321d0b",
     "packages": [
         {
             "name": "brick/math",
@@ -1053,6 +1053,70 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities",
+            "version": "v1.11.0-beta.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities.git",
+                "reference": "c2b767673029ad441f837e8a03d2a7af05439830"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/zipball/c2b767673029ad441f837e8a03d2a7af05439830",
+                "reference": "c2b767673029ad441f837e8a03d2a7af05439830",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": "^7.0|^8.0|^11.0",
+                "php": "^7.2.5|^8.0|^8.1|^8.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5|^6|^9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Thehouseofel\\Hexagonal\\Infrastructure\\HexagonalServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Domain/Helpers/DomainHeplers.php",
+                    "src/Infrastructure/Helpers/InfrastructureHeplers.php"
+                ],
+                "psr-4": {
+                    "Thehouseofel\\Hexagonal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Adrian Canals Csefko",
+                    "email": "a.canals14@gmail.com"
+                }
+            ],
+            "description": "Utilidades para desarrollar en arquitectura hexagonal y DDD en laravel",
+            "keywords": [
+                "architecture",
+                "ddd",
+                "hexagonal",
+                "laravel",
+                "package",
+                "utilities"
+            ],
+            "support": {
+                "issues": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/issues",
+                "source": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/tree/v1.11.0-beta.0"
+            },
+            "time": "2024-11-18T16:47:16+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5345,6 +5409,76 @@
             "time": "2024-11-08T15:46:42+00:00"
         },
         {
+            "name": "tightenco/ziggy",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tighten/ziggy.git",
+                "reference": "e5d51d2a58c23a2932d80938990fa6a7623cbe46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tighten/ziggy/zipball/e5d51d2a58c23a2932d80938990fa6a7623cbe46",
+                "reference": "e5d51d2a58c23a2932d80938990fa6a7623cbe46",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": ">=9.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "laravel/folio": "^1.1",
+                "orchestra/testbench": "^7.0 || ^8.0 || ^9.0",
+                "pestphp/pest": "^2.26",
+                "pestphp/pest-plugin-laravel": "^2.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tighten\\Ziggy\\ZiggyServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tighten\\Ziggy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Coulbourne",
+                    "email": "daniel@tighten.co"
+                },
+                {
+                    "name": "Jake Bathman",
+                    "email": "jake@tighten.co"
+                },
+                {
+                    "name": "Jacob Baker-Kretzmar",
+                    "email": "jacob@tighten.co"
+                }
+            ],
+            "description": "Use your Laravel named routes in JavaScript.",
+            "homepage": "https://github.com/tighten/ziggy",
+            "keywords": [
+                "Ziggy",
+                "javascript",
+                "laravel",
+                "routes"
+            ],
+            "support": {
+                "issues": "https://github.com/tighten/ziggy/issues",
+                "source": "https://github.com/tighten/ziggy/tree/v2.4.0"
+            },
+            "time": "2024-11-09T17:21:59+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.2.7",
             "source": {
@@ -7835,7 +7969,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
