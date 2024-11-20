@@ -11,7 +11,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        \Thehouseofel\Hexagonal\Infrastructure\Services\Hexagonal::ignoreMigrations();
+        \Thehouseofel\Hexagonal\Infrastructure\Services\Hexagonal::configure()->enablePreferencesCookie();
     }
 
     /**
