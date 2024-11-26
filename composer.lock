@@ -1056,16 +1056,16 @@
         },
         {
             "name": "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities",
-            "version": "v1.11.0-beta.0",
+            "version": "v1.12.0-beta.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities.git",
-                "reference": "c2b767673029ad441f837e8a03d2a7af05439830"
+                "reference": "71c6728e308f92123478f091ef0c3b703002bc6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/zipball/c2b767673029ad441f837e8a03d2a7af05439830",
-                "reference": "c2b767673029ad441f837e8a03d2a7af05439830",
+                "url": "https://api.github.com/repos/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/zipball/71c6728e308f92123478f091ef0c3b703002bc6e",
+                "reference": "71c6728e308f92123478f091ef0c3b703002bc6e",
                 "shasum": ""
             },
             "require": {
@@ -1114,9 +1114,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/issues",
-                "source": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/tree/v1.11.0-beta.0"
+                "source": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/tree/v1.12.0-beta.0"
             },
-            "time": "2024-11-18T16:47:16+00:00"
+            "time": "2024-11-26T15:19:01+00:00"
         },
         {
             "name": "laravel/framework",
