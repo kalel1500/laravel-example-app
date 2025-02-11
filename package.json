@@ -22,6 +22,7 @@
         "vite": "^6.0"
     },
     "dependencies": {
-        "@kalel1500/laravel-ts-utils": "^0.4.0-beta.10"
+        "@kalel1500/laravel-ts-utils": "^0.4.0-beta.10",
+        "tabulator-tables": "^6.3.1"
     }
 }
