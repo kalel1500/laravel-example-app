@@ -5,6 +5,7 @@ import { DefaultTranslations, TranslationReplacements, Translator } from '@kalel
 export interface AppTranslations extends DefaultTranslations {
     'test_message': string;
     'test_message_VARIABLE': string;
+    'the_tag': string;
 }
 
 const translator = Translator.getInstance<AppTranslations>();
