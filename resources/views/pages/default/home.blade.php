@@ -492,8 +492,8 @@
                     ></div>
                 </div>
 
-                <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                <div class="w-full md:w-1/3 p-6 flex flex-col grow shrink">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-sm">
                         <a href="#" class="flex flex-wrap no-underline hover:no-underline">
                             <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
                                 GETTING STARTED
@@ -507,17 +507,17 @@
                             </p>
                         </a>
                     </div>
-                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-sm p-6">
                         <div class="flex items-center justify-start">
-                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg">
+                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded-sm my-6 py-4 px-8 shadow-lg">
                                 Action
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                <div class="w-full md:w-1/3 p-6 flex flex-col grow shrink">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-sm">
                         <a href="#" class="flex flex-wrap no-underline hover:no-underline">
                             <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
                                 GETTING STARTED
@@ -531,17 +531,17 @@
                             </p>
                         </a>
                     </div>
-                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-sm p-6">
                         <div class="flex items-center justify-center">
-                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg">
+                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded-sm my-6 py-4 px-8 shadow-lg">
                                 Action
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                <div class="w-full md:w-1/3 p-6 flex flex-col grow shrink">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-sm">
                         <a href="#" class="flex flex-wrap no-underline hover:no-underline">
                             <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
                                 GETTING STARTED
@@ -555,9 +555,9 @@
                             </p>
                         </a>
                     </div>
-                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-sm p-6">
                         <div class="flex items-center justify-end">
-                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg">
+                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded-sm my-6 py-4 px-8 shadow-lg">
                                 Action
                             </button>
                         </div>
