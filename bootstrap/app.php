@@ -14,6 +14,6 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->redirectUsersTo('home'); // Ruta a la que redirigir si entran en rutas con el middleware "guest" (RedirectIfAuthenticated)
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        $callback = \Thehouseofel\Hexagonal\Infrastructure\Exceptions\ExceptionHandler::getUsingCallback();
+        $callback = \Thehouseofel\Kalion\Infrastructure\Exceptions\ExceptionHandler::getUsingCallback();
         $callback($exceptions);
     })->create();
