@@ -7,13 +7,21 @@ return [
     | Entity class
     |--------------------------------------------------------------------------
     |
-    | In the following option you can configure the user entity class.
+    | In the following option you can configure the user Entity class.
     |
     */
 
-    'entity_class' => env('KALION_AUTH_ENTITY_CLASS', \Src\Shared\Domain\Objects\Entities\UserEntity::class),
+    'entity_class' => \Src\Shared\Domain\Objects\Entities\UserEntity::class,
 
-    'user_repository_class' => env('KALION_AUTH_ENTITY_CLASS', \Src\Shared\Infrastructure\Repositories\Eloquent\UserRepository::class),
+    /*
+    |--------------------------------------------------------------------------
+    | Repository class
+    |--------------------------------------------------------------------------
+    |
+    | In the following option you can configure the user Repository class.
+    |
+    */
 
-    'load_roles' => (bool) env('KALION_AUTH_LOAD_ROLES', true),
+    'user_repository_class' => \Src\Shared\Infrastructure\Repositories\Eloquent\UserRepository::class,
+
 ];
