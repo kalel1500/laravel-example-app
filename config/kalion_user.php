@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'entity_class' => \Src\Shared\Domain\Objects\Entities\UserEntity::class,
+    'entity' => \Src\Shared\Domain\Objects\Entities\UserEntity::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -22,6 +22,5 @@ return [
     |
     */
 
-    'user_repository_class' => \Src\Shared\Infrastructure\Repositories\Eloquent\UserRepository::class,
-
+    'repository' => \Src\Shared\Infrastructure\Repositories\Eloquent\UserRepository::class,
 ];
