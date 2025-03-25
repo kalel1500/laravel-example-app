@@ -11,8 +11,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        \Thehouseofel\Kalion\Infrastructure\Services\Kalion::configure()
-            ->enablePreferencesCookie();
+        //
     }
 
     /**
