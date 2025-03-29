@@ -29,7 +29,8 @@
             "Src\\": "src/"
         },
         "files": [
-            "src/Shared/Infrastructure/Helpers/helpers.php"
+            "src/Shared/Domain/Helpers/helpers_domain.php",
+            "src/Shared/Infrastructure/Helpers/helpers_infrastructure.php"
         ]
     },
     "autoload-dev": {
