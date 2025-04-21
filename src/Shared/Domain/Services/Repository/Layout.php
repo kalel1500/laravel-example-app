@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Src\Shared\Domain\Services\RepositoryServices;
+namespace Src\Shared\Domain\Services\Repository;
 
-use Thehouseofel\Kalion\Domain\Contracts\Services\LayoutServiceContract;
+use Thehouseofel\Kalion\Domain\Contracts\Services\LayoutContract;
 use Thehouseofel\Kalion\Domain\Objects\DataObjects\Layout\Collections\NavbarItemCollection;
-use \Thehouseofel\Kalion\Domain\Services\RepositoryServices\LayoutService as LayoutServiceBase;
+use Thehouseofel\Kalion\Domain\Services\Repository\Layout as LayoutBase;
 
-final class LayoutService extends LayoutServiceBase implements LayoutServiceContract
+final class Layout extends LayoutBase implements LayoutContract
 {
     public function getMessageCounter(): int
     {
