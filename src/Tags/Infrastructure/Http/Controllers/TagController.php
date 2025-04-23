@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Src\Tags\Application\GetViewDataTagsUseCase;
 use Thehouseofel\Kalion\Infrastructure\Http\Controllers\Controller;
 
-final class TagsController extends Controller
+final class TagController extends Controller
 {
     public function __construct(
         public readonly GetViewDataTagsUseCase $getViewDataTagsUseCase,

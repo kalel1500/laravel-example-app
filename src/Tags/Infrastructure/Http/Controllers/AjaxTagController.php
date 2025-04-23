@@ -11,7 +11,7 @@ use Src\Tags\Application\DeleteTagUseCase;
 use Src\Tags\Application\GetTagListUseCase;
 use Thehouseofel\Kalion\Infrastructure\Http\Controllers\Controller;
 
-final class AjaxTagsController extends Controller
+final class AjaxTagController extends Controller
 {
     public function __construct(
         public readonly GetTagListUseCase        $getTagsListUseCase,
