@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Src\Tags\Infrastructure\Http\Controllers\TagsController;
-use Src\Tags\Infrastructure\Http\Controllers\AjaxTagsController;
+use Src\Home\Infrastructure\Http\Controllers\HomeController;
 use Src\Posts\Infrastructure\Http\Controllers\PostController;
-use Src\Shared\Infrastructure\Http\Controllers\DefaultController;
+use Src\Tags\Infrastructure\Http\Controllers\AjaxTagsController;
+use Src\Tags\Infrastructure\Http\Controllers\TagsController;
 
 /**
  * Ruta original de Laravel para la vista welcome
@@ -21,7 +21,7 @@ Route::redirect('/', default_url());
 
 // Rutas protegidas
 Route::middleware(['auth'])->group(function () {
-    Route::get('/home',                 [DefaultController::class, 'home'])->name('home');
+    Route::get('/home',                 [HomeController::class, 'home'])->name('home');
     Route::get('/posts',                [PostController::class, 'list'])->name('post.list');
     Route::get('/posts/{slug}',         [PostController::class, 'detail'])->name('post.detail');
     Route::get('/tags/{type?}',         [TagsController::class, 'tags'])->name('tags');
