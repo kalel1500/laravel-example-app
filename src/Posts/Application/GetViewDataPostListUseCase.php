@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Src\Dashboard\Application;
+namespace Src\Posts\Application;
 
-use Src\Dashboard\Domain\Objects\DataObjects\DashboardDataDto;
+use Src\Posts\Domain\Objects\DataObjects\ViewDataPostListDo;
 use Src\Shared\Domain\Contracts\Repositories\PostRepositoryContract;
 use Src\Shared\Domain\Contracts\Repositories\TagRepositoryContract;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelStringNull;
 
-final readonly class GetDashboardDataUseCase
+final readonly class GetViewDataPostListUseCase
 {
     public function __construct(
         public PostRepositoryContract $repositoryPost,
@@ -18,11 +18,11 @@ final readonly class GetDashboardDataUseCase
     {
     }
 
-    public function __invoke(?string $tag): DashboardDataDto
+    public function __invoke(?string $tag): ViewDataPostListDo
     {
         $tags  = $this->repositoryTag->all();
         $posts = $this->repositoryPost->searchByTag(ModelStringNull::new($tag));
-        return DashboardDataDto::fromArray([
+        return ViewDataPostListDo::fromArray([
             $tags,
             $posts,
             $posts->count(),

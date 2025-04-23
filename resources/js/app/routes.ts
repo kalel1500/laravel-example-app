@@ -5,6 +5,6 @@ import AdminController from "../src/admin/infrastructure/AdminController";
 
 export function defineRoutes(): void {
     Route.page('home', [DefaultController, 'home']);
-    Route.page('dashboard', [DashboardController, 'posts']);
+    Route.page('post.list', [DashboardController, 'posts']);
     Route.page('tags', [AdminController, 'tags'], true);
 }

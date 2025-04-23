@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Src\Dashboard\Application;
+namespace Src\Posts\Application;
 
 use Src\Shared\Domain\Contracts\Repositories\PostRepositoryContract;
 use Src\Shared\Domain\Objects\Entities\PostEntity;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelString;
 
-final readonly class GetPostDataUseCase
+final readonly class GetViewDataPostDetailUseCase
 {
     public function __construct(
         public PostRepositoryContract $repositoryPost,

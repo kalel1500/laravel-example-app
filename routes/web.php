@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Src\Tags\Infrastructure\Http\Controllers\TagsController;
 use Src\Tags\Infrastructure\Http\Controllers\AjaxTagsController;
-use Src\Dashboard\Infrastructure\Http\Controllers\DashboardController;
+use Src\Posts\Infrastructure\Http\Controllers\PostController;
 use Src\Shared\Infrastructure\Http\Controllers\DefaultController;
 
 /**
@@ -22,8 +22,8 @@ Route::redirect('/', default_url());
 // Rutas protegidas
 Route::middleware(['auth'])->group(function () {
     Route::get('/home',                 [DefaultController::class, 'home'])->name('home');
-    Route::get('/dashboard',            [DashboardController::class, 'dashboard'])->name('dashboard');
-    Route::get('/posts/{slug}',         [DashboardController::class, 'post'])->name('post');
+    Route::get('/posts',                [PostController::class, 'list'])->name('post.list');
+    Route::get('/posts/{slug}',         [PostController::class, 'detail'])->name('post.detail');
     Route::get('/tags/{type?}',         [TagsController::class, 'tags'])->name('tags');
     Route::get('/fetch/tags/{type?}',   [AjaxTagsController::class, 'tags'])->name('fetch.tags');
     Route::post('/fetch/tags',          [AjaxTagsController::class, 'create'])->name('fetch.tags.create');
