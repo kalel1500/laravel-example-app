@@ -2,7 +2,7 @@ import { Instantiable, TableSettingEvents, Ttable, ValidationRules } from "@kale
 import { DataViewTags } from "../infrastructure/TagsController";
 import { route } from "ziggy-js";
 import { CellEventCallback, Formatter, Options } from "tabulator-tables";
-import { __ } from "../../../app/translations";
+import { __ } from "../../../config/translations";
 
 export default class TagsListUseCase extends Instantiable
 {
