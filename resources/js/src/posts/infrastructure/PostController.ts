@@ -1,7 +1,7 @@
 import { route } from "ziggy-js";
 import { g } from "@kalel1500/kalion-js";
 
-export default class DashboardController {
+export default class PostController {
     posts() {
         const $select = document.getElementById('selectTags');
         $select?.addEventListener('change', e => {
