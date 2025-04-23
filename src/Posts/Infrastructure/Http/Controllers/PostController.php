@@ -22,12 +22,12 @@ final class PostController extends Controller
     public function list(Request $request): View
     {
         $data = $this->getViewDataPostListUseCase->__invoke($request->input('tag'));
-        return view('pages.dashboard.index', compact('data'));
+        return view('pages.post.list', compact('data'));
     }
 
     public function detail(string $slug): View
     {
         $post = $this->getViewDataPostDetailUseCase->__invoke($slug);
-        return view('pages.dashboard.post', compact('post'));
+        return view('pages.post.detail', compact('post'));
     }
 }

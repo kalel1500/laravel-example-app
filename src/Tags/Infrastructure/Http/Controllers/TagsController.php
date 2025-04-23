@@ -24,6 +24,6 @@ final class TagsController extends Controller
         $data = $this->getViewDataTagsUseCase->__invoke($isJson, $type);
         return $isJson
             ? response_json(true, 'Ok', $data->toArray())
-            : view('pages.admin.tags', compact('data'));
+            : view('pages.tag.index', compact('data'));
     }
 }
