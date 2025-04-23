@@ -1,4 +1,4 @@
-@php /** @var \Src\Admin\Domain\Objects\DataObjects\ViewTagsDto $data */ @endphp
+@php /** @var \Src\Tags\Domain\Objects\DataObjects\ViewTagsDto $data */ @endphp
 @php /** @var \Src\Shared\Domain\Objects\Entities\TagTypeEntity $tagType */ @endphp
 
 <x-kal::layout.app title="{{ config('app.name')}} - Tags">

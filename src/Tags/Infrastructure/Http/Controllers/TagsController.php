@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Src\Admin\Infrastructure\Http\Controllers;
+namespace Src\Tags\Infrastructure\Http\Controllers;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Src\Admin\Application\GetViewDataTagsUseCase;
+use Src\Tags\Application\GetViewDataTagsUseCase;
 use Thehouseofel\Kalion\Infrastructure\Http\Controllers\Controller;
 
-final class AdminController extends Controller
+final class TagsController extends Controller
 {
     public function __construct(
         public readonly GetViewDataTagsUseCase $getViewDataTagsUseCase,

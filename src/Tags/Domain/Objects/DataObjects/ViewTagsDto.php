@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Admin\Domain\Objects\DataObjects;
+namespace Src\Tags\Domain\Objects\DataObjects;
 
 use Src\Shared\Domain\Objects\Entities\Collections\TagTypeCollection;
 use Src\Shared\Domain\Objects\Entities\TagTypeEntity;

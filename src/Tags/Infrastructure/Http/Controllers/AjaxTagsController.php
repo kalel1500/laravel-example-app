@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Src\Admin\Infrastructure\Http\Controllers;
+namespace Src\Tags\Infrastructure\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Src\Admin\Application\UpdateOrCreateTagUseCase;
-use Src\Admin\Application\DeleteTagUseCase;
-use Src\Admin\Application\GetTagListUseCase;
+use Src\Tags\Application\UpdateOrCreateTagUseCase;
+use Src\Tags\Application\DeleteTagUseCase;
+use Src\Tags\Application\GetTagListUseCase;
 use Thehouseofel\Kalion\Infrastructure\Http\Controllers\Controller;
 
-final class AjaxAdminController extends Controller
+final class AjaxTagsController extends Controller
 {
     public function __construct(
         public readonly GetTagListUseCase        $getTagsListUseCase,

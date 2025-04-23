@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Src\Admin\Application;
+namespace Src\Tags\Application;
 
-use Src\Admin\Domain\Objects\DataObjects\FrontTagsDto;
-use Src\Admin\Domain\Objects\DataObjects\ViewTagsDto;
+use Src\Tags\Domain\Objects\DataObjects\FrontTagsDto;
+use Src\Tags\Domain\Objects\DataObjects\ViewTagsDto;
 use Src\Shared\Domain\Contracts\Repositories\TagTypeRepositoryContract;
 use Src\Shared\Domain\Services\Repository\TagTypeService;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelStringNull;

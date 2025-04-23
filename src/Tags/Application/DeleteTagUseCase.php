@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Admin\Application;
+namespace Src\Tags\Application;
 
 use Src\Shared\Domain\Contracts\Repositories\TagRepositoryContract;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelId;
