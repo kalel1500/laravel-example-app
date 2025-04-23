@@ -1,5 +1,5 @@
 import { Instantiable, TableSettingEvents, Ttable, ValidationRules } from "@kalel1500/kalion-js";
-import { DataViewTags } from "../infrastructure/AdminController";
+import { DataViewTags } from "../infrastructure/TagsController";
 import { route } from "ziggy-js";
 import { CellEventCallback, Formatter, Options } from "tabulator-tables";
 import { __ } from "../../../app/translations";

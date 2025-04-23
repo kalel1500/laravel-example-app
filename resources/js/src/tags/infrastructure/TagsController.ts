@@ -7,7 +7,7 @@ export type DataViewTags = {
     pluckedTypes: Record<string, string>;
 }
 
-export default class AdminController {
+export default class TagsController {
     tags(viewData: ViewData<DataViewTags>) {
         TagsListUseCase.new(viewData.data).__invoke();
     }
