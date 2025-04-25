@@ -1,6 +1,6 @@
 {
     "package": "kalel1500/kalion",
-    "version": "dev-master",
+    "version": "v0.25.0-beta.0",
     "timestamp": "2025-04-25 23:10:37",
     "stubs": [
         "app\\Providers\\DependencyServiceProvider.php",
