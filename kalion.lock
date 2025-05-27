@@ -9,7 +9,7 @@
         "database\\factories\\PostFactory.php",
         "database\\factories\\TagFactory.php",
         "database\\factories\\TagTypeFactory.php",
-        "database\\migrations\\2024_05_17_213442_create_states_table.php",
+        "database\\migrations\\2024_05_17_213442_create_statuses_table.php",
         "database\\migrations\\2025_01_30_133217_create_tag_types_table.php",
         "database\\migrations\\2025_01_30_133605_create_tags_table.php",
         "database\\migrations\\2025_01_30_133949_create_posts_table.php",
