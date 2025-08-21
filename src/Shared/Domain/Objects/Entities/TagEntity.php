@@ -5,18 +5,19 @@ declare(strict_types=1);
 namespace Src\Shared\Domain\Objects\Entities;
 
 use Src\Shared\Domain\Objects\Entities\Collections\PostCollection;
-use Thehouseofel\Kalion\Domain\Objects\Entities\ContractEntity;
+use Thehouseofel\Kalion\Domain\Attributes\RelationOf;
+use Thehouseofel\Kalion\Domain\Objects\Entities\AbstractEntity;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelId;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelIdNull;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelString;
 
-final class TagEntity extends ContractEntity
+final class TagEntity extends AbstractEntity
 {
     public function __construct(
         public readonly ModelId|ModelIdNull $id,
-        public readonly ModelString         $name,
-        public readonly ModelString         $code,
-        public readonly ModelId             $tag_type_id,
+        public readonly ModelString     $name,
+        public readonly ModelString     $code,
+        public readonly ModelId         $tag_type_id,
     )
     {
     }
@@ -41,23 +42,15 @@ final class TagEntity extends ContractEntity
         ];
     }
 
+    #[RelationOf(PostCollection::class)]
     public function posts(): PostCollection
     {
-        return $this->getRelation('posts');
+        return $this->getRelation();
     }
 
-    public function setPosts(array $value): void
-    {
-        $this->setRelation($value, 'posts', PostCollection::class);
-    }
-
+    #[RelationOf(TagTypeEntity::class)]
     public function tagType(): ?TagTypeEntity
     {
-        return $this->getRelation('tagType');
-    }
-
-    public function setTagType(?array $value): void
-    {
-        $this->setRelation($value, 'tagType', TagTypeEntity::class);
+        return $this->getRelation();
     }
 }
