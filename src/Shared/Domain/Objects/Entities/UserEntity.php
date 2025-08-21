@@ -6,6 +6,7 @@ namespace Src\Shared\Domain\Objects\Entities;
 
 use Src\Shared\Domain\Objects\Entities\Collections\CommentCollection;
 use Src\Shared\Domain\Objects\Entities\Collections\PostCollection;
+use Thehouseofel\Kalion\Domain\Attributes\RelationOf;
 use Thehouseofel\Kalion\Domain\Objects\Entities\UserEntity as BaseUserEntity;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelId;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelIdNull;
@@ -16,10 +17,10 @@ class UserEntity extends BaseUserEntity
 {
     public function __construct(
         ModelId|ModelIdNull $id,
-        ModelString     $name,
-        ModelString     $email,
-        ModelStringNull $email_verified_at,
-        public readonly ModelStringNull $other_field,
+        ModelString         $name,
+        ModelString         $email,
+        ModelStringNull     $email_verified_at,
+        public readonly     ModelStringNull $other_field,
     )
     {
         parent::__construct($id, $name, $email, $email_verified_at);
@@ -39,23 +40,15 @@ class UserEntity extends BaseUserEntity
         ]);
     }
 
+    #[RelationOf(PostCollection::class)]
     public function posts(): PostCollection
     {
-        return $this->getRelation('posts');
+        return $this->getRelation();
     }
 
-    public function setPosts(array $value): void
-    {
-        $this->setRelation($value, 'posts', PostCollection::class);
-    }
-
+    #[RelationOf(CommentCollection::class)]
     public function comments(): CommentCollection
     {
-        return $this->getRelation('comments');
-    }
-
-    public function setComments(array $value): void
-    {
-        $this->setRelation($value, 'comments', CommentCollection::class);
+        return $this->getRelation();
     }
 }

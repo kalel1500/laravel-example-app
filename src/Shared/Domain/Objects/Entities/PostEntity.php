@@ -6,13 +6,14 @@ namespace Src\Shared\Domain\Objects\Entities;
 
 use Src\Shared\Domain\Objects\Entities\Collections\CommentCollection;
 use Src\Shared\Domain\Objects\Entities\Collections\TagCollection;
-use Thehouseofel\Kalion\Domain\Objects\Entities\ContractEntity;
+use Thehouseofel\Kalion\Domain\Attributes\RelationOf;
+use Thehouseofel\Kalion\Domain\Objects\Entities\AbstractEntity;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelId;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelIdNull;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelString;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelTimestampNull;
 
-final class PostEntity extends ContractEntity
+final class PostEntity extends AbstractEntity
 {
     public function __construct(
         public readonly ModelId|ModelIdNull $id,
@@ -49,33 +50,21 @@ final class PostEntity extends ContractEntity
         ];
     }
 
+    #[RelationOf(UserEntity::class)]
     public function user(): ?UserEntity
     {
-        return $this->getRelation('user');
+        return $this->getRelation();
     }
 
-    public function setUser(?array $value): void
-    {
-        $this->setRelation($value, 'user', UserEntity::class);
-    }
-
+    #[RelationOf(CommentCollection::class)]
     public function comments(): CommentCollection
     {
-        return $this->getRelation('comments');
+        return $this->getRelation();
     }
 
-    public function setComments(array $value): void
-    {
-        $this->setRelation($value, 'comments', CommentCollection::class);
-    }
-
+    #[RelationOf(TagCollection::class)]
     public function tags(): TagCollection
     {
-        return $this->getRelation('tags');
-    }
-
-    public function setTags(array $value): void
-    {
-        $this->setRelation($value, 'tags', TagCollection::class);
+        return $this->getRelation();
     }
 }

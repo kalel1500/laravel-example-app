@@ -1,7 +1,7 @@
 {
     "package": "kalel1500/kalion",
-    "version": "dev-master",
-    "timestamp": "2025-05-28 18:05:46",
+    "version": "0.31.0.0-beta0",
+    "timestamp": "2025-08-21 12:00:15",
     "stubs": [
         ".env.save.local",
         ".prettierrc",
@@ -58,7 +58,7 @@
         "src\\Home\\Infrastructure\\Http\\Controllers\\HomeController.php",
         "src\\Posts\\Application\\GetViewDataPostDetailUseCase.php",
         "src\\Posts\\Application\\GetViewDataPostListUseCase.php",
-        "src\\Posts\\Domain\\Objects\\DataObjects\\ViewDataPostListDo.php",
+        "src\\Posts\\Domain\\Objects\\DataObjects\\ViewDataPostListDto.php",
         "src\\Posts\\Infrastructure\\Http\\Controllers\\PostController.php",
         "src\\Shared\\Domain\\Contracts\\Repositories\\CommentRepositoryContract.php",
         "src\\Shared\\Domain\\Contracts\\Repositories\\PostRepositoryContract.php",

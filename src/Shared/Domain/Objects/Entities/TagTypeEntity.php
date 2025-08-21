@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace Src\Shared\Domain\Objects\Entities;
 
 use Src\Shared\Domain\Objects\Entities\Collections\TagCollection;
-use Thehouseofel\Kalion\Domain\Objects\Entities\ContractEntity;
+use Thehouseofel\Kalion\Domain\Attributes\RelationOf;
+use Thehouseofel\Kalion\Domain\Objects\Entities\AbstractEntity;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelId;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelIdNull;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelString;
 
-final class TagTypeEntity extends ContractEntity
+final class TagTypeEntity extends AbstractEntity
 {
     public function __construct(
         public readonly ModelId|ModelIdNull $id,
@@ -38,13 +39,9 @@ final class TagTypeEntity extends ContractEntity
         ];
     }
 
+    #[RelationOf(TagCollection::class)]
     public function tags(): TagCollection
     {
-        return $this->getRelation('tags');
-    }
-
-    public function setTags(array $value): void
-    {
-        $this->setRelation($value, 'tags', TagCollection::class);
+        return $this->getRelation();
     }
 }
