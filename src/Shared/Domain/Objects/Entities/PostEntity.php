@@ -6,7 +6,7 @@ namespace Src\Shared\Domain\Objects\Entities;
 
 use Src\Shared\Domain\Objects\Entities\Collections\CommentCollection;
 use Src\Shared\Domain\Objects\Entities\Collections\TagCollection;
-use Thehouseofel\Kalion\Domain\Attributes\RelationOf;
+use Thehouseofel\Kalion\Domain\Objects\Entities\Attributes\RelationOf;
 use Thehouseofel\Kalion\Domain\Objects\Entities\AbstractEntity;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelId;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelIdNull;
@@ -24,30 +24,6 @@ final class PostEntity extends AbstractEntity
         public readonly ModelTimestampNull  $created_at,
     )
     {
-    }
-
-    protected static function createFromArray(array $data): static
-    {
-        return new static(
-            ModelId::from($data['id'] ?? null),
-            ModelString::new($data['title']),
-            ModelString::new($data['content']),
-            ModelString::new($data['slug']),
-            ModelId::new($data['user_id']),
-            ModelTimestampNull::new($data['created_at']),
-        );
-    }
-
-    protected function toArrayProperties(): array
-    {
-        return [
-            'id'         => $this->id->value(),
-            'title'      => $this->title->value(),
-            'content'    => $this->content->value(),
-            'slug'       => $this->slug->value(),
-            'user_id'    => $this->user_id->value(),
-            'created_at' => $this->created_at->value(),
-        ];
     }
 
     #[RelationOf(UserEntity::class)]

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Src\Shared\Domain\Objects\Entities;
 
 use Src\Shared\Domain\Objects\Entities\Collections\CommentCollection;
-use Thehouseofel\Kalion\Domain\Attributes\RelationOf;
+use Thehouseofel\Kalion\Domain\Objects\Entities\Attributes\RelationOf;
 use Thehouseofel\Kalion\Domain\Objects\Entities\AbstractEntity;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelId;
 use Thehouseofel\Kalion\Domain\Objects\ValueObjects\EntityFields\ModelIdNull;
@@ -21,28 +21,6 @@ final class CommentEntity extends AbstractEntity
         public readonly ModelIdNull     $comment_id,
     )
     {
-    }
-
-    protected static function createFromArray(array $data): static
-    {
-        return new static(
-            ModelId::from($data['id'] ?? null),
-            ModelString::new($data['content']),
-            ModelId::new($data['user_id']),
-            ModelIdNull::new($data['post_id']),
-            ModelIdNull::new($data['comment_id']),
-        );
-    }
-
-    protected function toArrayProperties(): array
-    {
-        return [
-            'id'         => $this->id->value(),
-            'content'    => $this->content->value(),
-            'user_id'    => $this->user_id->value(),
-            'post_id'    => $this->post_id->value(),
-            'comment_id' => $this->comment_id->value(),
-        ];
     }
 
     #[RelationOf(UserEntity::class)]
