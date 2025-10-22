@@ -1,7 +1,7 @@
 {
     "package": "kalel1500/kalion",
-    "version": "v0.35.0-beta.0",
-    "timestamp": "2025-09-25 14:07:16",
+    "version": "dev-develop",
+    "timestamp": "2025-10-22 13:47:20",
     "stubs": [
         ".env.save.local",
         ".prettierrc",
@@ -74,8 +74,7 @@
         "src\\Shared\\Domain\\Objects\\Entities\\TagEntity.php",
         "src\\Shared\\Domain\\Objects\\Entities\\TagTypeEntity.php",
         "src\\Shared\\Domain\\Objects\\Entities\\UserEntity.php",
-        "src\\Shared\\Domain\\Services\\Repository\\AppLayoutData.php",
-        "src\\Shared\\Domain\\Services\\Repository\\TagTypeService.php",
+        "src\\Shared\\Domain\\Services\\AppLayoutData.php",
         "src\\Shared\\Infrastructure\\Helpers\\helpers_infrastructure.php",
         "src\\Shared\\Infrastructure\\Models\\Comment.php",
         "src\\Shared\\Infrastructure\\Models\\Post.php",
