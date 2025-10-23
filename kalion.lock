@@ -1,7 +1,7 @@
 {
     "package": "kalel1500/kalion",
     "version": "dev-develop",
-    "timestamp": "2025-10-23 08:22:09",
+    "timestamp": "2025-10-23 08:59:31",
     "stubs": [
         ".env.save.local",
         ".prettierrc",
@@ -46,7 +46,7 @@
         "resources\\js\\src\\home\\application\\HomeUseCase.ts",
         "resources\\js\\src\\home\\infrastructure\\HomeController.ts",
         "resources\\js\\src\\posts\\infrastructure\\PostController.ts",
-        "resources\\js\\src\\shared\\domain\\entities\\TagType.ts",
+        "resources\\js\\src\\shared\\_types\\index.ts",
         "resources\\js\\src\\tags\\application\\TagsListUseCase.ts",
         "resources\\js\\src\\tags\\infrastructure\\TagsController.ts",
         "resources\\views\\pages\\home\\index.blade.php",
