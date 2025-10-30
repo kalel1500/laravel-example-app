@@ -22,7 +22,7 @@
         "vite": "^7.0.4"
     },
     "dependencies": {
-        "@kalel1500/kalion-js": "^0.10.0-beta.0"
+        "@kalel1500/kalion-js": "^0.10.1-beta.0"
     },
     "engines": {
         "node": ">=20.11.1"
