@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Src\Home\Infrastructure\Http\Controllers\HomeController;
 use Src\Posts\Infrastructure\Http\Controllers\PostController;
+use Src\Shared\Infrastructure\Http\Controllers\TestController;
 use Src\Tags\Infrastructure\Http\Controllers\AjaxTagController;
 use Src\Tags\Infrastructure\Http\Controllers\TagController;
 
@@ -15,6 +16,13 @@ Route::get('/welcome', fn() => view('welcome'))->name('welcome');
 /**
  * Rutas de la aplicación
  */
+
+Route::get('/logout-web',      [TestController::class, 'logoutWeb']);
+Route::get('/logout-api',      [TestController::class, 'logoutApi']);
+Route::get('/login-web/{id?}', [TestController::class, 'loginWeb']);
+Route::get('/login-api/{id?}', [TestController::class, 'loginApi']);
+Route::get('/test-web',        [TestController::class, 'testWeb']);
+Route::get('/test-api',        [TestController::class, 'testApi']);
 
 // Rutas protegidas
 Route::middleware(['auth'])->group(function () {
